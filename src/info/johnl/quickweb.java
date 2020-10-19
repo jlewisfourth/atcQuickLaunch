@@ -3,9 +3,11 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.TextListener;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.net.URL;
 
 public class quickweb {
     private JButton vrc;
@@ -15,6 +17,7 @@ public class quickweb {
     private JButton vStarsButton;
     private JButton vAtisButton;
     private JButton airnavButton;
+    private JTextField prefferredAirportText;
 
     public quickweb() {
         vrc.addActionListener(new ActionListener() {
@@ -41,21 +44,24 @@ public class quickweb {
                 openExe("C:\\Users\\jlewi\\AppData\\Local\\vATIS\\vATIS.exe");
             }
         });
-
         AFVButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 openExe("C:\\AudioForVATSIM\\AudioForVATSIM.exe");
             }
         });
-
         airnavButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                openWebsite("http://airnav.com/airport/kden");
+                String airportSelection = prefferredAirportText.getText();
+                openWebsite("http://www.airnav.com/airport/" + airportSelection);
+
             }
         });
+
+
     }
+
 
     static void openExe(String url){
         try {
