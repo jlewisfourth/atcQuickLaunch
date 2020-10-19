@@ -6,6 +6,13 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+<<<<<<< Updated upstream
+=======
+import java.net.URL;
+import java.util.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+>>>>>>> Stashed changes
 
 public class quickweb {
     private JButton vrc;
@@ -15,6 +22,11 @@ public class quickweb {
     private JButton vStarsButton;
     private JButton vAtisButton;
     private JButton airnavButton;
+<<<<<<< Updated upstream
+=======
+    private JTextField prefferredAirportText;
+    private JLabel timeCurrentZulu;
+>>>>>>> Stashed changes
 
     public quickweb() {
         vrc.addActionListener(new ActionListener() {
@@ -68,8 +80,24 @@ public class quickweb {
                 openWebsite("http://airnav.com/airport/kden");
             }
         });
+<<<<<<< Updated upstream
     }
 
+=======
+
+        
+
+    }
+
+    static void showTime(){
+        // Creating date object, and creating the format to display the time in.
+
+        // I think we may need to create a loop in a seperate thread to run the time check, and have that thread publish a time check once every second.
+        DateFormat df = new SimpleDateFormat("dd/MM/yy HH:mm:ss");
+        Date dateobj = new Date();
+    }
+
+>>>>>>> Stashed changes
     static void openExe(String url){
         try {
             Runtime runTime = Runtime.getRuntime();
