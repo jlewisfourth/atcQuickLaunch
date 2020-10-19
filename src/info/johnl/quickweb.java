@@ -25,6 +25,7 @@ public class quickweb {
         });
         vStarsButton.addActionListener(new ActionListener() {
             @Override
+
             public void actionPerformed(ActionEvent e) {
                 openExe("C:\\Program Files (x86)\\vSTARS\\vSTARS.exe");
             }
@@ -43,6 +44,12 @@ public class quickweb {
         });
         vAtisButton.addActionListener(new ActionListener() {
             @Override
+
+            /*
+            We need to change the Users/LOCALUSER
+            to %appdatalocal% so it can pull that users directory instead of yours john.
+             */
+
             public void actionPerformed(ActionEvent e) {
                 openExe("C:\\Users\\jlewi\\AppData\\Local\\vATIS\\vATIS.exe");
             }
