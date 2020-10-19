@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="quickweb:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/quickweb_jar</output-path>
-    <root id="archive" name="quickweb.jar">
-      <element id="module-output" name="quickweb" />
-    </root>
-  </artifact>
-</component>
