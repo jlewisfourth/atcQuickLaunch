@@ -31,6 +31,12 @@ public class quickweb {
         });
         vERAMButton.addActionListener(new ActionListener() {
             @Override
+
+            /*
+            We need to change the Users/LOCALUSER
+            to %appdatalocal% so it can pull that users directory instead of yours john.
+             */
+
             public void actionPerformed(ActionEvent e) {
                 openExe("C:\\Users\\jlewi\\AppData\\Local\\vERAM\\vERAM.exe");
             }
