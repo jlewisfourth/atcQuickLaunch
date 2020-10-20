@@ -44,12 +44,6 @@ public class quickweb {
                 openExe("C:\\Users\\jlewi\\AppData\\Local\\vATIS\\vATIS.exe");
             }
         });
-        AFVButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                openExe("C:\\AudioForVATSIM\\AudioForVATSIM.exe");
-            }
-        });
         airnavButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -60,6 +54,12 @@ public class quickweb {
         });
 
 
+        AFVButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
     }
 
 
