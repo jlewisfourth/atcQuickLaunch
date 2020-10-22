@@ -3,17 +3,13 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.TextListener;
-import java.io.IOException;
 import java.net.URI;
-import java.net.URISyntaxException;
-import java.net.URL;
 
 public class quickweb {
     private JButton vrc;
     private JPanel mainPanel;
     private JButton vERAMButton;
-    private JButton AFVButton;
+    private JButton settingsButton;
     private JButton vStarsButton;
     private JButton vAtisButton;
     private JButton airnavButton;
@@ -24,12 +20,14 @@ public class quickweb {
             @Override
             public void actionPerformed(ActionEvent e) {
                 openExe("C:\\Program Files (x86)\\VRC\\VRC.exe");
+                //TODO Pull from the file selector path
             }
         });
         vStarsButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 openExe("C:\\Program Files (x86)\\vSTARS\\vSTARS.exe");
+                //TODO Pull from the file selector path
             }
         });
         vERAMButton.addActionListener(new ActionListener() {
@@ -42,12 +40,14 @@ public class quickweb {
 
             public void actionPerformed(ActionEvent e) {
                 openExe("C:\\Users\\jlewi\\AppData\\Local\\vERAM\\vERAM.exe");
+                //TODO Pull from the file selector path
             }
         });
         vAtisButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 openExe("C:\\Users\\jlewi\\AppData\\Local\\vATIS\\vATIS.exe");
+                //TODO Pull from the file selector path
             }
         });
         airnavButton.addActionListener(new ActionListener() {
@@ -60,10 +60,10 @@ public class quickweb {
         });
 
 
-        AFVButton.addActionListener(new ActionListener() {
+        settingsButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                //TODO find a way to open settings panel (located in settings.main)
             }
         });
     }
