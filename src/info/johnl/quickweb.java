@@ -3,59 +3,71 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.IOException;
 import java.net.URI;
-import java.net.URISyntaxException;
 
 public class quickweb {
     private JButton vrc;
     private JPanel mainPanel;
     private JButton vERAMButton;
-    private JButton AFVButton;
+    private JButton settingsButton;
     private JButton vStarsButton;
     private JButton vAtisButton;
     private JButton airnavButton;
+    private JTextField prefferredAirportText;
 
     public quickweb() {
         vrc.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 openExe("C:\\Program Files (x86)\\VRC\\VRC.exe");
+                //TODO Pull from the file selector path
             }
         });
         vStarsButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 openExe("C:\\Program Files (x86)\\vSTARS\\vSTARS.exe");
+                //TODO Pull from the file selector path
             }
         });
         vERAMButton.addActionListener(new ActionListener() {
             @Override
+
+            /*
+            We need to change the Users/LOCALUSER
+            to %appdatalocal% so it can pull that users directory instead of yours john.
+             */
+
             public void actionPerformed(ActionEvent e) {
                 openExe("C:\\Users\\jlewi\\AppData\\Local\\vERAM\\vERAM.exe");
+                //TODO Pull from the file selector path
             }
         });
         vAtisButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 openExe("C:\\Users\\jlewi\\AppData\\Local\\vATIS\\vATIS.exe");
+                //TODO Pull from the file selector path
             }
         });
-
-        AFVButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                openExe("C:\\AudioForVATSIM\\AudioForVATSIM.exe");
-            }
-        });
-
         airnavButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                openWebsite("http://airnav.com/airport/kden");
+                String airportSelection = prefferredAirportText.getText();
+                openWebsite("http://www.airnav.com/airport/" + airportSelection);
+
+            }
+        });
+
+
+        settingsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //TODO find a way to open settings panel (located in settings.main)
             }
         });
     }
+
 
     static void openExe(String url){
         try {
