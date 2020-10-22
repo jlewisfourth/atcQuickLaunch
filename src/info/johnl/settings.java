@@ -15,6 +15,14 @@ public class settings {
 
     public static JFrame frame = new JFrame("Settings");
 
+    public static void openSettings(){
+        frame.setContentPane(new settings().settingsPanel);
+        frame.setContentPane(new settings().settingsPanel);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
+    }
+
     public settings() {
         saveAndExitButton.addActionListener(new ActionListener() {
             @Override
@@ -28,11 +36,7 @@ public class settings {
     //TODO style settings panel
 
     public static void main(String[] args) {
-        frame.setContentPane(new settings().settingsPanel);
-        frame.setContentPane(new settings().settingsPanel);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setVisible(true);
+        //PASS
     }
 
 
