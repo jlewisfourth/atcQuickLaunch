@@ -63,7 +63,6 @@ public class quickweb {
         settingsButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //TODO find a way to open settings panel (located in settings.main)
                 settings.openSettings();
             }
         });
