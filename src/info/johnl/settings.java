@@ -1,6 +1,7 @@
 package info.johnl;
 
 import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -54,7 +55,65 @@ public class settings {
         selectVRCFileLocationButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                vrcPathChooser.setDialogTitle("Select VRC .exe");
+                JFileChooser chooser = new JFileChooser();
+                FileNameExtensionFilter filter = new FileNameExtensionFilter(
+                        "VRC Executable", "exe");
+                chooser.setFileFilter(filter);
+                int returnVal = chooser.showOpenDialog(chooser.getParent());
+                if (returnVal == JFileChooser.APPROVE_OPTION) {
+                    System.out.println("User Selected VRC EXE Location");
+                    // We need to place the save location storing thing in here
+
+                }
+            }
+
+            //vrcPathChooser.setDialogTitle("Select VRC .exe");
+        });
+
+        selectVATISFileLocationButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFileChooser chooser = new JFileChooser();
+                FileNameExtensionFilter filter = new FileNameExtensionFilter(
+                        "vATIS Executable", "exe");
+                chooser.setFileFilter(filter);
+                int returnVal = chooser.showOpenDialog(chooser.getParent());
+                if (returnVal == JFileChooser.APPROVE_OPTION) {
+                    System.out.println("User Selected vATIS Location");
+                    // We need to place the save location storing thing in here
+
+                }
+            }
+        });
+
+        selectVERAMFileLocationButton.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFileChooser chooser = new JFileChooser();
+                FileNameExtensionFilter filter = new FileNameExtensionFilter(
+                        "vERAM Executable", "exe");
+                chooser.setFileFilter(filter);
+                int returnVal = chooser.showOpenDialog(chooser.getParent());
+                if (returnVal == JFileChooser.APPROVE_OPTION) {
+                    System.out.println("User Selected vERAM EXE Location");
+                    // We need to place the save location storing thing in here
+
+                }
+            }
+    });
+
+        selectVSTARSFileLocationButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFileChooser chooser = new JFileChooser();
+                FileNameExtensionFilter filter = new FileNameExtensionFilter(
+                        "vERAM Executable", "exe");
+                chooser.setFileFilter(filter);
+                int returnVal = chooser.showOpenDialog(chooser.getParent());
+                if (returnVal == JFileChooser.APPROVE_OPTION) {
+                    System.out.println("User Selected vERAM EXE Location");
+                    // We need to place the save location storing thing in here
+                }
             }
         });
     }
