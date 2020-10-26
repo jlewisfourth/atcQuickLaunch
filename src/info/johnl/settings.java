@@ -40,23 +40,16 @@ public class settings {
         });
     }
 
-        selectVRCFileLocationButton.addActionListener(new ActionListener();
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                Runtime.getRuntime().exec("explorer.exe /select," + vrcPath);
-            }
-    )};
 
 
 
-    public JButton
 
     //TODO add function to the file selector
     //TODO style settings panel
 
-    public static void main(String[] args) {
-        //PASS
-    }
+    public static void main(String[]args){
+
+        }
 
 
 }
