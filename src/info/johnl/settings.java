@@ -14,12 +14,24 @@ public class settings {
     private JButton selectVSTARSFileLocationButton;
     private JButton selectVRCFileLocationButton;
     private JButton saveAndExitButton;
+    private JFileChooser vrcPathChooser;
+    private JFileChooser vStarsPathChooser;
+    private JFileChooser vEramPathChooser;
+    private JFileChooser vAtisPathChooser;
+
+    /*
+    Initialize the Default file paths.  Read the file for what each of the paths are
+     */
 
     String userprofile = System.getenv("USERPROFILE");
     String vrcPath = "C:\\Program Files (x86)\\VRC\\VRC.exe";
-    String vstarsPath = "C:\\Program Files (x86)\\vSTARS\\vSTARS.exe";
-    String veramPath = userprofile + "\\AppData\\Local\\vERAM\\vERAM.exe";
-    String vatisPath = userprofile + "\\AppData\\Local\\vATIS\\vATIS.exe";
+    String vStarsPath = "C:\\Program Files (x86)\\vSTARS\\vSTARS.exe";
+    String vEramPath = userprofile + "\\AppData\\Local\\vERAM\\vERAM.exe";
+    String vAtisPath = userprofile + "\\AppData\\Local\\vATIS\\vATIS.exe";
+
+    /*
+    Create and Open Settings Panel
+     */
 
     public static JFrame frame = new JFrame("Settings");
 
@@ -38,12 +50,19 @@ public class settings {
                 frame.dispose();
             }
         });
+
+        selectVRCFileLocationButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                vrcPathChooser.setDialogTitle("Select VRC .exe");
+            }
+        });
     }
 
 
 
 
-
+    //TODO Create a text file to read and write to: Pulls the file paths from this file
     //TODO add function to the file selector
     //TODO style settings panel
 
