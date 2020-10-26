@@ -16,35 +16,37 @@ public class quickweb {
     private JTextField prefferredAirportText;
 
     String userprofile = System.getenv("USERPROFILE");
+    String vrcPath = "C:\\Program Files (x86)\\VRC\\VRC.exe";
+    String vStarsPath = "C:\\Program Files (x86)\\vSTARS\\vSTARS.exe";
+    String vEramPath = userprofile + "\\AppData\\Local\\vERAM\\vERAM.exe";
+    String vAtisPath = userprofile + "\\AppData\\Local\\vATIS\\vATIS.exe";
 
     public quickweb() {
         vrc.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                openExe("C:\\Program Files (x86)\\VRC\\VRC.exe");
+                openExe(vrcPath);
                 //TODO Pull from the file selector path
             }
         });
         vStarsButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                openExe("C:\\Program Files (x86)\\vSTARS\\vSTARS.exe");
+                openExe(vStarsPath);
                 //TODO Pull from the file selector path
             }
         });
         vERAMButton.addActionListener(new ActionListener() {
             @Override
-
-
             public void actionPerformed(ActionEvent e) {
-                openExe(userprofile + "\\AppData\\Local\\vERAM\\vERAM.exe");
+                openExe(vEramPath);
                 //TODO Pull from the file selector path
             }
         });
         vAtisButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                openExe(userprofile + "\\AppData\\Local\\vATIS\\vATIS.exe");
+                openExe(vAtisPath);
                 //TODO Pull from the file selector path
             }
         });
