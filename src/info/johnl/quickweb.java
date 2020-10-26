@@ -15,6 +15,8 @@ public class quickweb {
     private JButton airnavButton;
     private JTextField prefferredAirportText;
 
+    String userprofile = System.getenv("USERPROFILE");
+
     public quickweb() {
         vrc.addActionListener(new ActionListener() {
             @Override
@@ -39,14 +41,14 @@ public class quickweb {
              */
 
             public void actionPerformed(ActionEvent e) {
-                openExe("C:\\Users\\jlewi\\AppData\\Local\\vERAM\\vERAM.exe");
+                openExe(userprofile + "\\AppData\\Local\\vERAM\\vERAM.exe");
                 //TODO Pull from the file selector path
             }
         });
         vAtisButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                openExe("C:\\Users\\jlewi\\AppData\\Local\\vATIS\\vATIS.exe");
+                openExe(userprofile + "\\AppData\\Local\\vATIS\\vATIS.exe");
                 //TODO Pull from the file selector path
             }
         });
