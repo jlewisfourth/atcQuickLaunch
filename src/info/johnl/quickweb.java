@@ -15,13 +15,18 @@ public class quickweb {
     private JButton airnavButton;
     private JTextField prefferredAirportText;
 
+    // Sets all default install locations
+
     String userprofile = System.getenv("USERPROFILE");
     String vrcPath = "C:\\Program Files (x86)\\VRC\\VRC.exe";
     String vStarsPath = "C:\\Program Files (x86)\\vSTARS\\vSTARS.exe";
     String vEramPath = userprofile + "\\AppData\\Local\\vERAM\\vERAM.exe";
     String vAtisPath = userprofile + "\\AppData\\Local\\vATIS\\vATIS.exe";
 
+
     public quickweb() {
+
+        //Action events when VRC Option pressed
         vrc.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -29,6 +34,8 @@ public class quickweb {
                 //TODO Pull from the file selector path
             }
         });
+
+        //Action events when vStars Option pressed
         vStarsButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -36,6 +43,8 @@ public class quickweb {
                 //TODO Pull from the file selector path
             }
         });
+
+        //Action events when vERAM Option pressed
         vERAMButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -43,6 +52,8 @@ public class quickweb {
                 //TODO Pull from the file selector path
             }
         });
+
+        //Action events when vATIS Option pressed
         vAtisButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -50,16 +61,19 @@ public class quickweb {
                 //TODO Pull from the file selector path
             }
         });
+
+        //Action events when Airnav Option pressed
         airnavButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                // Grabs 4 letter ICAO string from text box
                 String airportSelection = prefferredAirportText.getText();
                 openWebsite("http://www.airnav.com/airport/" + airportSelection);
 
             }
         });
 
-
+        //Action events when Settings Option pressed
         settingsButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -69,7 +83,7 @@ public class quickweb {
 
     }
 
-
+    // Defines openEXE
     static void openExe(String url){
         try {
             Runtime runTime = Runtime.getRuntime();
@@ -79,6 +93,7 @@ public class quickweb {
         }
     }
 
+    // Defines openWebsite
     static void openWebsite(String url) {
         if (Desktop.isDesktopSupported()) {
             try {
